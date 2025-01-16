@@ -1,0 +1,49 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensures the footer stays at the bottom */
+  padding: 20px;
+}
+
+.chat-window {
+  flex-grow: 1; /* Chat windows take the remaining space */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer {
+  background-color: #2b2d42;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+.message-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+
+  .chat-window {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+}

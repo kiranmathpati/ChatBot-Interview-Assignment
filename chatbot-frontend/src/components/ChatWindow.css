@@ -1,0 +1,129 @@
+/* Base styles */
+body{
+    background-color: #2b2d42;
+}
+.chat-window {
+    border: 1px solid #1b263b;
+    border-radius: 8px;
+    padding: 16px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #4a4e69;
+  }
+  
+  .message-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    max-height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #842029;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .message-container {
+    display: flex;
+    align-items: flex-end;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .owner-message {
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  .sender-message {
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .message {
+    padding: 8px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  
+  .owner-message .message {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+  
+  .sender-message .message {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  .message-owner {
+    font-size: 0.75rem;
+    margin-top: 4px;
+    color: #555;
+  }
+  
+  .message-form {
+    display: flex;
+    flex-direction: column; /* Ensure proper alignment */
+    gap: 8px;
+  }
+  
+  .message-form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .message-form button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Full width on small screens to avoid overflow */
+    max-width: 100%; /* Ensure it respects the container size */
+  }
+  
+  .message-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* App layout for two chat windows */
+  .app {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .app {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .chat-window {
+      width: 90%; /* Full width for smaller screens */
+    }
+  
+    .message-list {
+      max-height: 200px; /* Adjust height for smaller screens */
+    }
+  
+    .message-form input {
+      padding: 6px;
+    }
+  
+    .message-form button {
+      padding: 6px 10px;
+      width: 100%; /* Ensure full width for small screens */
+    }
+  }
+  
